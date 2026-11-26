@@ -82,11 +82,6 @@
         var verified = false;
         try { verified = localStorage.getItem(KEY) === "1"; } catch (e) {}
         if (verified) return;
-
-        /* O gate existe APENAS na home da oferta (.ghost-home-scope) — a tela onde
-           o Instagram do alvo é adicionado. Em nenhuma outra rota/página.
-           Ele é criado via JS porque a hidratação do React Router descarta do body
-           qualquer nó estático fora da árvore do app. */
         var GATE_HTML = [
           '<div id="ghost-age-gate" role="dialog" aria-modal="true" aria-label="Verificação de idade">',
           '  <div class="ghost-gate-card">',
